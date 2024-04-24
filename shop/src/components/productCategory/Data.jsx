@@ -95,5 +95,5 @@ const menu = [
         category: "عطر و ادکلن",
         img: "/src/assets/img/small-item-28.jpg"
     },
-
 ]
+export default menu

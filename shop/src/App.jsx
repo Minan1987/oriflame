@@ -1,5 +1,5 @@
 import React from 'react'
-import { TopHeader, Menu, Slider, Footer, CosmeticsPage, HairPage, SkinPage, WomenHealthPage, MenHealthPage, ChildrenHealthPage, LatestProducts, DailyDeal, ProductCategory, ContactUs, AboutUs } from './components'
+import { TopHeader, Menu, Slider, Footer, CosmeticsPage, HairPage, SkinPage, WomenHealthPage, MenHealthPage, ChildrenHealthPage, LatestProducts, DailyDeal, ContactUs, AboutUs, ProductCategories } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const HomePage = () => {
@@ -8,7 +8,7 @@ const HomePage = () => {
       <Slider />
       <LatestProducts />
       <DailyDeal />
-      <ProductCategory />
+      <ProductCategories />
     </>
   )
 }
