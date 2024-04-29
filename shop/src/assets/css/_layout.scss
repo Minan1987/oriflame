@@ -1,0 +1,595 @@
+// HEADER
+header {
+    .top-header {
+        margin: 0 auto;
+        padding: 10px 50px;
+        background-color: $primary;
+        @include centering;
+        justify-content: space-between;
+        color: $white;
+
+        @media (max-width: 1200px) {
+
+            padding: 10px 20px;
+
+        }
+
+        .tel {
+            small {
+                padding-left: 20px;
+            }
+
+            i {
+                color: $white;
+                font-size: 12px;
+                transform: rotate(100deg);
+            }
+
+            span {
+                color: $white;
+            }
+        }
+
+        .logo {
+            a {
+                img {
+                    width: 200px;
+
+                    @media only screen and (max-width: $mdBreakpoint) {
+                        width: 150px;
+                    }
+                }
+            }
+        }
+
+        .login-register {
+            a {
+                &::after {
+                    content: "|";
+                    padding: 0 10px;
+                    font-weight: 100;
+                    color: #ccc;
+                }
+
+                &:nth-child(3)::after {
+                    content: '';
+                }
+            }
+
+        }
+    }
+
+    .bottom-hedaer {
+        background-color: #fafafa;
+        border-bottom: 3px solid #dcdcdc5c;
+    }
+}
+
+// SLIDE SHOW
+#slideshow {
+    .carousel-inner {
+        .carousel-item {
+            a {
+                width: 100%;
+
+                .slide-img {
+                    height: calc(100vh - 121px);
+                    width: 100%;
+                    // height: 579px;
+                    display: block;
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                .carousel-caption {
+                    right: 15%;
+                    width: 100%;
+                    left: initial;
+                    text-align: right;
+                    top: 30%;
+
+                    @media only screen and (max-width: $lgBreakpoint) {
+                        right: 5%;
+                        left: 5%;
+                        top: 10%;
+                        bottom: 10%;
+                    }
+
+                    .lineUp {
+                        animation: 2.5s anim-lineUp ease-out;
+                    }
+
+                    @keyframes anim-lineUp {
+                        0% {
+                            opacity: 0;
+                            transform: translateY(80%);
+                        }
+
+                        20% {
+                            opacity: 0;
+                        }
+
+                        50% {
+                            opacity: 1;
+                            transform: translateY(0%);
+                        }
+
+                        100% {
+                            opacity: 1;
+                            transform: translateY(0%);
+                        }
+                    }
+
+                    h2 {
+                        color: $dark-gray;
+                    }
+
+                    .lineUp2 {
+                        animation: 2s anim-lineUp2 ease-out;
+                    }
+
+                    @keyframes anim-lineUp2 {
+                        0% {
+                            opacity: 0;
+
+                        }
+
+                        20% {
+                            opacity: 0;
+
+                        }
+
+                        50% {
+                            opacity: 0;
+                            transform: translateY(80%);
+                        }
+
+                        100% {
+                            opacity: 1;
+                            transform: translateY(0%);
+                        }
+                    }
+
+                    p {
+                        padding-top: 20px;
+                        color: $light-gray;
+                        padding-bottom: 10px;
+                    }
+
+                    .lineUp3 {
+                        animation: 3s anim-lineUp3 ease-out;
+                    }
+
+                    @keyframes anim-lineUp3 {
+                        0% {
+                            opacity: 0;
+
+                        }
+
+                        20% {
+                            opacity: 0;
+
+                        }
+
+                        50% {
+                            opacity: 0;
+
+                        }
+
+                        60% {
+                            opacity: 0;
+                            transform: translateY(80%);
+                        }
+
+                        100% {
+                            opacity: 1;
+                            transform: translateY(0%);
+                        }
+                    }
+
+                    .btn-outline-custom {
+                        border: 1px solid $primary;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// NEW ARRIVAL
+
+
+// DILY DEALS
+.daily-deal {
+    background-image: url(../img/daily-deal-bg.webp);
+    background-size: cover;
+    color: $white !important;
+
+    .detail-content {
+        color: $white !important;
+
+        .title-card {
+
+            h4,
+            ul li i {
+                color: $white !important;
+            }
+        }
+
+        .pro-details {
+            .price {
+                color: $white !important;
+            }
+        }
+    }
+
+
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    span {
+        background-color: #1b111180;
+    }
+}
+
+//CATEGORY
+.category {
+    .card {
+        @include centering;
+
+        &:hover .card-body .mask-content img {
+            transform: scale(1) !important;
+        }
+
+        .card-header {
+            border: 0;
+            background-color: transparent;
+            margin-bottom: 40px;
+
+            .card-header-tabs {
+                li {
+                    .tab-btn {
+                        border: 2px solid $light-gray;
+                        color: $light-gray;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 14px;
+                        margin: 0 10px;
+                        padding: 19px 25px;
+                        position: relative;
+                        -webkit-transition: all 300ms ease-in 0s;
+                        transition: all 300ms ease-in 0s;
+                        border-radius: 0;
+
+                        @media only screen and (max-width: $smBreakpoint) {
+                            font-size: 12px;
+                            padding: 10px 5px;
+                            margin: 0 5px;
+                        }
+
+                        &.active {
+                            border-color: $primary;
+                            color: $primary;
+                        }
+
+                        &:hover {
+                            border: 2px solid $dark-gray;
+                            color: $dark-gray;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            position: relative;
+            height: 374px !important;
+            overflow: hidden;
+
+            @media only screen and (max-width: $mdBreakpoint) {
+                height: 100% !important;
+            }
+
+            .p-item {
+                .mask-content {
+                    img {
+                        height: 374px !important;
+                        overflow: hidden;
+                    }
+                }
+
+                .detail-content {
+                    @include item-in-center;
+                    width: 100%;
+                    text-align: center !important;
+
+                    p {
+                        color: $white;
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin: 0;
+                    }
+                }
+
+                &:hover .card-body .mask-content img {
+                    transform: scale(1.2) !important;
+                }
+            }
+        }
+    }
+
+    .single-banner {
+        .cat {
+            position: relative;
+            overflow: hidden;
+
+            .cat-img {
+                a {
+                    width: 100%;
+                    transition: all 500ms ease-in 0s;
+
+                    img {
+                        transition: all 300ms ease-in 0s;
+                        width: 100%;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                        background: $dark-gray;
+                        opacity: 0;
+                        transition: .5s;
+                    }
+
+                    &:hover::after {
+                        opacity: .85;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+
+            .cat-content {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                bottom: 35px;
+                top: auto;
+                transform: translateY(-50%);
+
+                a {
+                    width: auto;
+                    background: $dark-gray;
+                    color: $white;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding: 15px 33px;
+                    transition: all 300ms ease-in 0s;
+
+                }
+            }
+
+            &:hover .cat-content a {
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+//TOP BRANDS
+.top-brands {
+    margin-top: 20px;
+    margin-bottom: 80px;
+
+    .brand-item {
+        @include centering;
+
+        a {
+            position: relative;
+            padding: 0;
+            height: 100px;
+            width: 100px;
+            @media only screen and (max-width: $smBreakpoint) {
+                width: 70px;
+                height: 70px;
+            }
+
+            img {
+                border-radius: 50%;
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+
+            }
+
+            .mask {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                text-align: center;
+                transition: all .4s;
+            }
+
+            &:hover .mask {
+                background-color: rgba(236, 85, 152, .5);
+            }
+        }
+    }
+}
+
+
+
+// FOOTER
+footer {
+    background-image: url(../img/footer-bg.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    padding-bottom: 0;
+    position: relative;
+
+    .backToTop {
+        position: absolute;
+        left: 50%;
+        top: -25px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        background-color: $primary;
+        border-radius: 100%;
+        display: block;
+        -ms-filter: "alpha(opacity=$value)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        transform: translate(-50%, 0);
+
+    }
+
+    .footer-info {
+        padding: 96px 0 60px;
+        border-top: 4px solid $primary;
+
+        .footer-text {
+            margin-bottom: 40px;
+            display: block;
+
+            .footer-logo {
+                img {
+                    width: 270px;
+                }
+            }
+
+            p {
+                padding-top: 30px;
+                font-size: 15px;
+                font-weight: 300;
+                color: $dark-gray;
+                line-height: 1.7;
+            }
+
+        }
+
+        .padding-left {
+            padding-left: 40px;
+        }
+
+        .footerInfoTitle {
+            h4 {
+                font-size: 22px;
+                line-height: 27px;
+                margin-bottom: 35px;
+                font-weight: 500;
+
+                @media only screen and (max-width: $smBreakpoint) {
+                    &.mt-sm-5 {
+                        margin-top: 35px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+        }
+
+        .useLink {
+            .list-unstyled {
+                padding-left: 0;
+                list-style: none;
+
+                li {
+                    margin: 0 0 15px;
+
+                    a {
+                        color: $dark-gray;
+                        font-size: 15px;
+
+                        i {
+                            margin-left: 10px;
+                            font-size: 12px;
+                            color: $dark-gray;
+
+                            &::before {
+                                content: "\f104";
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .footerGallery {
+            a {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+        }
+
+        .footerText {
+            p {
+                font-size: 15px;
+                color: $dark-gray;
+            }
+
+            .input-group {
+                width: 100%;
+
+                input {
+                    border-radius: 0;
+                    color: $light-gray;
+                }
+
+                .input-group-addon {
+                    width: 35%;
+                    background-color: $primary;
+                    color: #fff;
+                    font-weight: 300;
+                    border: 1px solid $primary;
+                }
+            }
+        }
+    }
+
+    .copyRight {
+        ul {
+            @media only screen and (max-width: $smBreakpoint) {
+                justify-content: center !important;
+            }
+
+            li {
+                a {
+                    padding-left: 20px;
+                    color: $light-gray;
+                    transition: .5s;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        .copyRightText {
+            color: $light-gray;
+        }
+    }
+}
