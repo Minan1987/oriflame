@@ -5,11 +5,17 @@
         color: #888888;
     }
 }
+
 .btn-orif {
     background-color: #e43192 !important;
     color: #fff;
     font-weight: 300;
     border: 1px solid #e43192;
+    &:hover {
+        background-color: #fff;
+        color: #e43192;
+        border: 1px solid #e43192;
+    }
 }
 
 .card {
@@ -25,6 +31,9 @@
             padding: 5px 0;
             text-align: center;
             margin-top: 35px;
+            @media only screen and (max-width: $smBreakpoint) {
+                margin-top: 0;
+            }
 
             .count {
                 background: #fff none repeat scroll 0 0;
@@ -33,6 +42,9 @@
                 padding: 20px 5px;
                 text-align: center;
                 width: 23%;
+                @media only screen and (max-width: $smBreakpoint) {
+                    padding: 5px;
+                }
 
                 p {
                     color: $primary;
@@ -40,6 +52,9 @@
                     font-size: 14px;
                     font-weight: 700;
                     padding-bottom: 2px;
+                    @media only screen and (max-width: $smBreakpoint) {
+                        padding-bottom: 0;
+                    }
                 }
 
                 &:not(:last-child) {
@@ -59,11 +74,9 @@
         .mask-content {
             width: 100%;
             overflow: hidden;
-            height: 424px;
 
             img {
                 width: 100%;
-                height: 424px;
                 transition: all .5s ease-in-out 0s;
             }
         }
@@ -136,6 +149,7 @@
         }
     }
 }
+
 div.two-small-items {
     margin-bottom: 40px;
 
@@ -146,14 +160,16 @@ div.two-small-items {
             .carousel-item {
                 padding: 0;
 
-                
+
             }
         }
     }
 }
+
 .card {
     background-color: transparent;
     border: none;
+
     &:hover .card-body .mask-content img {
         transform: scale(1.2);
     }
@@ -168,24 +184,23 @@ div.two-small-items {
 
         .mask-content {
             width: 100%;
-            overflow: hidden;
-            height: 424px;
+            overflow: hidden; 
 
             img {
                 width: 100%;
-                height: 424px;
                 transition: all .5s ease-in-out 0s;
             }
         }
 
         .detail-content {
             text-align: right;
+
             .title-card {
                 display: flex;
                 justify-content: space-between;
 
                 h4 {
-                    
+
                     font-size: 16px;
                     color: $light-gray;
                     padding-top: 10px;
@@ -193,7 +208,8 @@ div.two-small-items {
                     width: 175px;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    @media only screen and (max-width: $lgBreakpoint){
+
+                    @media only screen and (max-width: $lgBreakpoint) {
                         font-size: 14px;
                         width: 130px;
                         padding-top: 5px;
@@ -255,10 +271,12 @@ div.two-small-items {
         }
 
     }
+
     &:hover .detail-content .title-card ul li i {
         opacity: 1;
     }
 }
+
 div.one-big-item {
     margin-bottom: 40px;
 
@@ -274,6 +292,9 @@ div.one-big-item {
                 height: 590px;
                 transition: .3s;
                 position: relative;
+                @media only screen and (max-width: $mdBreakpoint) {
+                    height: auto;
+                }
             }
 
             &::before {

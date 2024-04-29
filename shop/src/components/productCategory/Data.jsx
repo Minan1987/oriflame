@@ -3,13 +3,13 @@ const menu = [
         id: 1,
         title: "ماسک پوست",
         category: "محصولات مراقبتی پوست",
-        img: "/src/assets/img/small-item-20.jpg"
+        img: "/src/assets/img/small-item-20.WEBP"
     },
     {
         id: 2,
         title: "کرم ضد آفتاب",
         category: "محصولات مراقبتی پوست",
-        img: "/src/assets/img/small-item-21.jpg"
+        img: "/src/assets/img/small-item-21.WEBP"
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const menu = [
         id: 5,
         title: "سِرم و درمان",
         category: "محصولات مراقبتی پوست",
-        img: "/src/assets/img/small-item-18.jpg"
+        img: "/src/assets/img/small-item-18.WEBP"
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ const menu = [
         id: 8,
         title: "مرطوب کننده",
         category: "محصولات مراقبتی پوست",
-        img: "/src/assets/img/small-item-17.jpg"
+        img: "/src/assets/img/small-item-17.WEBP"
     },
     {
         id: 9,

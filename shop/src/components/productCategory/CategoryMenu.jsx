@@ -15,7 +15,7 @@ function CategoryMenu({ items }) {
                                             items.map((item) => {
                                                 const { id, title, img } = item
                                                 return (
-                                                    <div key={id} className="col-sm-12 col-md-6 col-lg-3">
+                                                    <div key={id} className="col-sm-12 col-md-6 col-lg-3 mb-4">
                                                         <div className="card p-item" >
                                                             <a className="card-body">
                                                                 <div className="mask-content">
