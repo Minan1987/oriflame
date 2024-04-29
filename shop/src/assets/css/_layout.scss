@@ -79,6 +79,11 @@ header {
                     display: block;
                     background-size: cover;
                     background-position: center;
+                    background-repeat: no-repeat;
+                    // @media only screen and (max-width: $mdBreakpoint) {
+                    //     background-size: contain;
+                    //     height: 100%;
+                    // }
                 }
 
                 .carousel-caption {
