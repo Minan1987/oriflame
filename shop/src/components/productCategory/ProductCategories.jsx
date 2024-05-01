@@ -15,7 +15,7 @@ function ProductCategories() {
     }
     return (
         <div className="m-4 category">
-            <div className="card text-center">
+            <div className="text-center">
                 <Categories categories={categories} filterItems={filterItems} />
                 <CategoryMenu items={menuItems} />
             </div>

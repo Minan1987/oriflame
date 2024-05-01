@@ -1,53 +1,95 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
 function CategoryMenu({ items }) {
-    return (
-        <div className="card-body">
-            <div className="tab-content">
-                <div className="tab-pane fade show active">
-                    <div className="two-small-items">
-                        <div className="carousel slide" data-bs-ride="carousel">
-                            <div className="carousel-inner">
-                                <div className="carousel-item active" >
-                                    <div className="row">
+    const sliderRef = useRef(null);
 
-                                        {
-                                            items.map((item) => {
-                                                const { id, title, img } = item
-                                                return (
-                                                    <div key={id} className="col-sm-12 col-md-6 col-lg-3 mb-4">
-                                                        <div className="card p-item" >
-                                                            <a className="card-body">
-                                                                <div className="mask-content">
-                                                                    <img src={img} alt={title} width="100%" />
-                                                                </div>
-                                                                <div className="detail-content">
-                                                                    <p>{title}</p>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                )
-                                            })
-                                        }
-
-                                    </div>
+    useEffect(() => {
+        // Initialize the slider after component mounted
+        if (sliderRef.current) {
+            sliderRef.current.slickGoTo(0); // Reset slider to the first slide
+        }
+    }, [items]); // Reinitialize the slider when items change
+    const isMobileView = window.innerWidth <= 768;
+    const settings = {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: <IoIosArrowForward fill='#444' />,
+        nextArrow: <IoIosArrowBack fill='#444' />,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+              breakpoint: 1024, // Adjust breakpoint as needed
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              }
+            },
+            {
+              breakpoint: 768, // Adjust breakpoint as needed
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              }
+            },
+            {
+              breakpoint: 480, // Adjust breakpoint as needed
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }
+          ]
+    };
+    if(isMobileView || items.length > 4){
+        return (
+        <Slider ref={sliderRef} {...settings}>
+            {
+                items.map((item) => {
+                    const { id, title, img } = item
+                    return (
+                        <div key={id} className="item">
+                            <a href="#" className="">
+                                <div className="mask-content">
+                                    <img src={img} alt={title} width="100%" />
                                 </div>
-                            </div>
-                            <button className="carousel-control-prev d-none d-lg-block" type="button"
-                                data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon"></span>
-                            </button>
-                            <button className="carousel-control-next d-none d-lg-block" type="button"
-                                data-bs-slide="next">
-                                <span className="carousel-control-next-icon"></span>
-                            </button>
+                                <div className="detail-content">
+                                    <p>{title}</p>
+                                </div>
+                            </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    )
+                })
+            }
+        </Slider>
     )
-}
+    }
+
+        return (
+            <div className="row category-item">
+                {items.map((item) => {
+                    const { id, title, img } = item;
+                    return (
+                        <div key={id} className="col">
+                            <a className="">
+                                <div className="mask-content">
+                                    <img src={img} alt={title} width="100%" />
+                                </div>
+                                <div className="detail-content">
+                                    <p>{title}</p>
+                                </div>
+                            </a>
+                        </div>
+                    );
+                })}
+            </div>
+        );
+    }
+
 
 export default CategoryMenu
