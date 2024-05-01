@@ -18,8 +18,8 @@ function CategoryMenu({ items }) {
     const settings = {
         slidesToShow: 4,
         slidesToScroll: 4,
-        prevArrow: <IoIosArrowForward fill='#444' />,
-        nextArrow: <IoIosArrowBack fill='#444' />,
+        prevArrow: <IoIosArrowForward />,
+        nextArrow: <IoIosArrowBack />,
         autoplay: true,
         autoplaySpeed: 3000,
         responsive: [

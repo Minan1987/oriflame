@@ -300,25 +300,24 @@ header {
 
     .slick-slider {
         .slick-arrow {
-            &::before {
-                font-family: "Font Awesome 5 Pro";
-                font-weight: 300;
-                content: "\f10d";
-            }
+            height: 30px;
+            width: 30px;
+            background-color: #ccc;
+            color: #fff;
+            
         }
-
         .slick-list {
             .slick-slide {
                 .item {
-                    .category-item {
-                        position: relative;
+                    position: relative;
+                    .detail-content {
+                        @include item-in-center;
 
-                        .mask-content {}
-
-                        .detail-content {
-                            @include item-in-center;
-
-                            p {}
+                        p {
+                            color: #fff;
+                            font-size: 18px;
+                            font-weight: 500;
+                            margin: 0;
                         }
                     }
                 }
