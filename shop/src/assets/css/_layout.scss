@@ -254,7 +254,7 @@ header {
         justify-content: center;
         border: 0;
         background-color: transparent;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
 
         @media only screen and (max-width: $smBreakpoint) {
             padding: 0;
@@ -306,25 +306,36 @@ header {
             color: #fff;
             
         }
-        .slick-list {
-            .slick-slide {
-                .item {
-                    position: relative;
-                    .detail-content {
-                        @include item-in-center;
+       
+        .item {
+            position: relative;
+            .detail-content {
+                @include item-in-center;
 
-                        p {
-                            color: #fff;
-                            font-size: 18px;
-                            font-weight: 500;
-                            margin: 0;
-                        }
-                    }
+                p {
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin: 0;
                 }
             }
         }
+        
     }
+    .item {
+        position: relative;
+        .detail-content {
+            @include item-in-center;
 
+            p {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+    } 
+    
     .single-banner {
         .cat {
             position: relative;

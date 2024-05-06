@@ -18,7 +18,7 @@ function CategoryMenu({ items }) {
     const settings = {
         slidesToShow: 4,
         slidesToScroll: 4,
-        prevArrow: <IoIosArrowForward />,
+        prevArrow: <IoIosArrowForward/>,
         nextArrow: <IoIosArrowBack />,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -48,7 +48,7 @@ function CategoryMenu({ items }) {
     };
     if(isMobileView || items.length > 4){
         return (
-        <Slider ref={sliderRef} {...settings}>
+        <Slider ref={sliderRef} {...settings} className='mb-2'>
             {
                 items.map((item) => {
                     const { id, title, img } = item
@@ -71,11 +71,11 @@ function CategoryMenu({ items }) {
     }
 
         return (
-            <div className="row category-item">
+            <div className="row category-item mb-4">
                 {items.map((item) => {
                     const { id, title, img } = item;
                     return (
-                        <div key={id} className="col">
+                        <div key={id} className="col item">
                             <a className="">
                                 <div className="mask-content">
                                     <img src={img} alt={title} width="100%" />

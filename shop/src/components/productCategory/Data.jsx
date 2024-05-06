@@ -14,10 +14,7 @@ import imageCat13 from '../../assets/img/small-item-25.jpg'
 import imageCat14 from '../../assets/img/small-item-26.jpg'
 import imageCat15 from '../../assets/img/small-item-27.jpg'
 import imageCat16 from '../../assets/img/small-item-28.jpg'
-import imageCat17 from '../../assets/img/category-1.jpg'
-import imageCat18 from '../../assets/img/category-2.jpg'
-import imageCat19 from '../../assets/img/category-4.jpg'
-import imageCat20 from '../../assets/img/category-6.jpg'
+
 const menu = [
     {
         id: 1,
