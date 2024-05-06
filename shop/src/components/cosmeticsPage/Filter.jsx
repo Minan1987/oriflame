@@ -1,0 +1,35 @@
+import React from 'react'
+
+function Filter(props) {
+    console.log(props);
+    return (
+        <div className='filter d-flex justify-content-between align-items-center p-2'>
+            <div className="result">تعداد محصولات: {props.count} محصول</div>
+            <div className="sort text-center">
+                <div className="sort-title">مرتب سازی بر اساس</div>
+                <div className="form-checkbox d-flex justify-content-between align-items-center">
+                    <div className="form-group ms-2 d-flex align-items-center">
+                        <input type="radio" value="asc" name="sort-radio" onChange={props.sortProducts} />
+                        <label className='me-1'>جدیدترین</label>
+                    </div>
+                    <div className="form-group ms-2 d-flex align-items-center">
+                        <input type="radio" value="desc" name="sort-radio" onChange={props.sortProducts} />
+                        <label className='me-1'>قدیمی ترین</label>
+                    </div>
+                </div>
+            </div>
+            <div className="all-cosmetics d-flex">
+                <div>دسته بندی آرایشی</div>
+                <select className="form-select" value={props.filterCategory} onChange={props.filterProduct} >
+                    <option value="">همه</option>
+                    <option value="آرایش صورت">آرایش صورت</option>
+                    <option value="آرایش لب">آرایش لب</option>
+                    <option value="آرایش چشم">آرایش چشم</option>
+                    <option value="ناخن">ناخن</option>
+                </select>
+            </div>
+        </div>
+    )
+}
+
+export default Filter

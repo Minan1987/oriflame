@@ -304,11 +304,12 @@ header {
             width: 30px;
             background-color: #ccc;
             color: #fff;
-            
+
         }
-       
+
         .item {
             position: relative;
+
             .detail-content {
                 @include item-in-center;
 
@@ -320,10 +321,12 @@ header {
                 }
             }
         }
-        
+
     }
+
     .item {
         position: relative;
+
         .detail-content {
             @include item-in-center;
 
@@ -334,8 +337,8 @@ header {
                 margin: 0;
             }
         }
-    } 
-    
+    }
+
     .single-banner {
         .cat {
             position: relative;
@@ -446,7 +449,41 @@ header {
     }
 }
 
+//Cosmetics Page
+.cosmetics {
+    .filter {
+        height: 100px;
+    }
 
+    .cart {
+        .cart-item {
+            .product-item {
+                .product-details {
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                    }
+                }
+
+                .product-price {
+                    .price {
+                        .purchases-number {
+                            width: 25px;
+                            height: 25px;
+                            background-color: $dark-gray;
+                            border-radius: 50%;
+                            color: $white;
+                            font-size: 10px;
+                            padding: 3px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 // FOOTER
 footer {

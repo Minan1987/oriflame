@@ -2,8 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Vazirmatn;
+    list-style: none;
+    outline: none;
+}
 
+body {
+    direction: rtl;
+    font-family: Vazirmatn;
 }
 
 @font-face {
@@ -21,4 +26,3 @@ a {
     color: inherit;
     cursor: pointer;
 }
-
