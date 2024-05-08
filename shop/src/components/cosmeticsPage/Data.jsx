@@ -18,7 +18,7 @@ const products = [
       price: "35000",
       category: "آرایش صورت",
       brand: "Oriflame",
-      qty: "6"
+      qty: 1
    },
    {
       id: "2",
@@ -27,7 +27,7 @@ const products = [
       price: "500000",
       category: "آرایش لب",
       brand: "Colour Unlimited",
-      qty: "7"
+      qty: 1
    },
    {
       id: "3",
@@ -36,7 +36,7 @@ const products = [
       price: "450000",
       category: "آرایش صورت",
       brand: "Giordani Gold Rose Petal Blushing Pearls",
-      qty: "2"
+      qty: 1
    },
    {
       id: "4",
@@ -45,7 +45,7 @@ const products = [
       price: "850000",
       category: "آرایش چشم",
       brand: "Giordani Gold",
-      qty: "6"
+      qty: 1
    },
    {
       id: "5",
@@ -54,7 +54,7 @@ const products = [
       price: "990000",
       category: "آرایش چشم",
       brand: "ONCOLOUR",
-      qty: "7"
+      qty: 1
    },
    {
       id: "6",
@@ -63,7 +63,7 @@ const products = [
       price: "16000000",
       category: "آرایش لب",
       brand: "The ONE",
-      qty: "3"
+      qty: 1
    },
    {
       id: "7",
@@ -72,7 +72,7 @@ const products = [
       price: "350000",
       category: "آرایش صورت",
       brand: "Giordani Gold Pressed Powder",
-      qty: "3"
+      qty: 1
    },
    {
       id: "8",
@@ -81,7 +81,7 @@ const products = [
       price: "890000",
       category: "آرایش صورت",
       brand: "Oriflame",
-      qty: "4"
+      qty: 1
    },
    {
       id: "9",
@@ -90,7 +90,7 @@ const products = [
       price: "1100000",
       category: "آرایش چشم",
       brand: "The ONE",
-      qty: "6"
+      qty: 1
    },
    {
       id: "10",
@@ -99,7 +99,7 @@ const products = [
       price: "590000",
       category: "آرایش صورت",
       brand: "The ONE",
-      qty: "6"
+      qty: 1
    },
    {
       id: "11",
@@ -108,7 +108,7 @@ const products = [
       price: "350000",
       category: "ناخن",
       brand: "Oriflame",
-      qty: "8"
+      qty: 1
    }
 ]
 export default products

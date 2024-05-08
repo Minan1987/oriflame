@@ -10,6 +10,8 @@
     border: 1px solid #e43192;
     color: #e43192;
     background-color: #fff;
+    min-width: 110px;
+    font-size: 14px;
 
     &:hover {
         border: 1px solid #444;
@@ -278,6 +280,7 @@ div.two-small-items {
                     position: relative;
                     transition: .5s;
                     opacity: .7;
+                    border: none;
 
                     i {
                         @include item-in-center;

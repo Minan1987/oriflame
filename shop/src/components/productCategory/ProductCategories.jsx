@@ -16,7 +16,7 @@ function ProductCategories() {
     }
     return (
         <div className="m-4 category">
-            <div class="title text-center py-5 mb-5">
+            <div className="title text-center py-5 mb-5">
                 <h2>دسته بندی محصولات</h2>
                 <p>لاین های تخصصی اوریفلیم شامل با کیفیت ترین محصولات آرایشی و بهداشتی می باشند.</p>
             </div>

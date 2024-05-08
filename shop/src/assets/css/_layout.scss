@@ -451,38 +451,76 @@ header {
 
 //Cosmetics Page
 .cosmetics {
-    .filter {
-        height: 100px;
+    .main {
+        .filter {
+            height: 100px;
+        }
     }
 
-    .cart {
-        .cart-item {
-            .product-item {
-                .product-details {
-                    img {
-                        width: 100px;
-                        height: 100px;
-                        object-fit: cover;
-                    }
-                }
+    .sidebar {
+        .cart {
+            .show-price {
+                background-color: #f9e4ef;
+                color: $primary;
+                padding: 10px;
 
-                .product-price {
-                    .price {
+            }
+
+            .empty-price {
+                background-color: #ccc;
+                color: #444;
+                padding: 10px;
+            }
+
+            .cart-item {
+                .product-item {
+                    .product-details {
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            object-fit: cover;
+                        }
+
+                        h2 {
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .product-price {
+                        .price {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: $dark-gray;
+                        }
+
                         .purchases-number {
-                            width: 25px;
-                            height: 25px;
-                            background-color: $dark-gray;
+                            width: 35px;
+                            height: 35px;
+                            background-color: $primary;
                             border-radius: 50%;
-                            color: $white;
-                            font-size: 10px;
-                            padding: 3px;
+                            color: #fff;
+                            font-size: 11px;
+                            font-weight: 400;
                             margin-right: 5px;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            padding: 3px;
+                            line-height: 0.8;
                         }
                     }
                 }
             }
+
+            .total-price {
+                .total-text {
+                    font-size: 16px;
+                }
+            }
         }
     }
+
 }
 
 // FOOTER
