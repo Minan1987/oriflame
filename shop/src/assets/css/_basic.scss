@@ -1,4 +1,14 @@
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('fonts/webfonts/Vazirmatn[wght].woff2') format('woff2 supports variations'),
+         url('fonts/webfonts/Vazirmatn[wght].woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
 * {
+    font-family: 'Vazirmatn';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,17 +18,10 @@
 
 body {
     direction: rtl;
-    font-family: Vazirmatn;
+    font-family: 'Vazirmatn';
 }
 
-@font-face {
-    font-family: 'Vazirmatn';
-    src: url('../font/webfonts/Vazirmatn[wght].woff2') format('woff2 supports variations'),
-        url('../font/webfonts/Vazirmatn[wght].woff2') format('woff2-variations');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
+
 
 a {
     display: inline-block;

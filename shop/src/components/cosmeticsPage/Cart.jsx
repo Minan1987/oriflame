@@ -1,5 +1,5 @@
 import React from 'react'
-import pro1 from '../../assets/img/small-item-1.webp'
+import formatCarrency from '../Util';
 
 function Cart(props) {
     const { cartItems, removeProduct } = props
@@ -20,7 +20,7 @@ function Cart(props) {
                                 </div>
                                 <div className="product-price text-left">
                                     <div className="price d-flex align-items-center">
-                                        <div>{item.price} تومان</div>
+                                        <div>{formatCarrency(item.price)}</div>
                                         <div className='purchases-number'>{item.qty} خرید</div>
                                     </div>
                                     <div className="remove-item mt-4">
@@ -31,7 +31,7 @@ function Cart(props) {
                         </div>
                         <div className="total-price bg-white p-2 mt-4 rounded d-flex justify-content-between">
                             <h4 className='total-text'>مجموع قیمت:</h4>
-                            <div className="total">{totalPrice} تومان</div>
+                            <div className="total">{formatCarrency(totalPrice)}</div>
                         </div>
                     </div>
                 )

@@ -1,9 +1,10 @@
 import React from 'react'
-import pro1 from '../../assets/img/small-item-1.webp'
+import formatCarrency from '../Util';
 import { FaPlus } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa6";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { FaRegStar } from "react-icons/fa6";
+
 
 function Products(props) {
     return (
@@ -32,7 +33,7 @@ function Products(props) {
 
                                         <h2 className="card-text">{item.title}</h2>
                                         <div className="pro-details">
-                                            <div className="price">{item.price} تومان</div>
+                                            <div className="price">{formatCarrency(item.price)}</div>
                                             <button className="add-to-card" onClick={() => props.addProduct(item)}>
                                                 <i><FaPlus /></i>
                                             </button>
@@ -43,8 +44,6 @@ function Products(props) {
                         </li>
                     )
                 }
-
-
             </ul>
         </div>
     )
