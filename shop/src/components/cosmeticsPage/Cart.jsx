@@ -11,7 +11,7 @@ function Cart(props) {
             }
             {
                 cartItems.map((item) =>
-                    <div key={item.id}>
+                    <div key={item.id} className='mb-3 p-3 bg-white'>
                         <div className="cart-item">
                             <div className="product-item d-flex justify-content-between align-items-center">
                                 <div className="product-details d-flex align-items-center">
@@ -29,13 +29,13 @@ function Cart(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="total-price bg-white p-2 mt-4 rounded d-flex justify-content-between">
-                            <h4 className='total-text'>مجموع قیمت:</h4>
-                            <div className="total">{formatCarrency(totalPrice)}</div>
-                        </div>
                     </div>
                 )
             }
+            <div className="total-price bg-white p-2 mt-4 rounded d-flex justify-content-between">
+                <h4 className='total-text'>مجموع قیمت:</h4>
+                <div className="total">{formatCarrency(totalPrice)}</div>
+            </div>
         </div>
     )
 }
