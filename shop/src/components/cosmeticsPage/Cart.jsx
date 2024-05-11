@@ -1,5 +1,6 @@
 import React from 'react'
 import formatCarrency from '../Util';
+import Fade from 'react-reveal/fade';
 
 function Cart(props) {
     const { cartItems, removeProduct } = props
@@ -11,7 +12,8 @@ function Cart(props) {
             }
             {
                 cartItems.map((item) =>
-                    <div key={item.id} className='mb-3 p-3 bg-white'>
+                    <Fade bottom>
+                        <div key={item.id} className='mb-3 p-3 bg-white'>
                         <div className="cart-item">
                             <div className="product-item d-flex justify-content-between align-items-center">
                                 <div className="product-details d-flex align-items-center">
@@ -30,6 +32,7 @@ function Cart(props) {
                             </div>
                         </div>
                     </div>
+                    </Fade>
                 )
             }
             <div className="total-price bg-white p-2 mt-4 rounded d-flex justify-content-between">

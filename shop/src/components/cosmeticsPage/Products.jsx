@@ -1,5 +1,6 @@
 import React from 'react'
 import formatCarrency from '../Util';
+import Fade from 'react-reveal/fade';
 import { FaPlus } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa6";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
@@ -9,6 +10,7 @@ import { FaRegStar } from "react-icons/fa6";
 function Products(props) {
     return (
         <div className='products'>
+            <Fade bottom cascade>
             <ul className='row align-items-center p-0'>
                 {
                     props.items.map((item) =>
@@ -45,6 +47,7 @@ function Products(props) {
                     )
                 }
             </ul>
+            </Fade>
         </div>
     )
 }
