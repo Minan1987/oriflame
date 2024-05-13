@@ -31,7 +31,7 @@ const LatestProducts = () => {
             </div>
             <div className="row">
                 <div className="col-12 col-lg-6">
-                    <div className="two-small-items" data-aos="fade-left">
+                    <div className="two-small-items" data-aos="zoom-in">
                         <div id="product-item-slide-show-1" className="carousel slide" data-bs-ride="carousel">
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
@@ -163,7 +163,7 @@ const LatestProducts = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="one-big-item" data-aos="fade-left">
+                    <div className="one-big-item" data-aos="zoom-in">
                         <a href="#">
                             <figure className="item">
                                 <img src={bigImage1} alt="" width="100%" />
@@ -172,14 +172,14 @@ const LatestProducts = () => {
                     </div>
                 </div>
                 <div className="col-12 col-lg-6" >
-                    <div className="one-big-item" data-aos="fade-right">
+                    <div className="one-big-item" data-aos="zoom-in">
                         <a href="#">
                             <figure className="item">
                                 <img src={bigImage2} alt="" width="100%" />
                             </figure>
                         </a>
                     </div>
-                    <div className="two-small-items" data-aos="fade-right">
+                    <div className="two-small-items" data-aos="zoom-in">
                         <div id="product-item-slide-show-2" className="carousel slide" data-bs-ride="carousel">
                             <div className="carousel-inner">
                                 <div className="carousel-item active">

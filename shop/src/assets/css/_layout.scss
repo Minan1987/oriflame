@@ -14,20 +14,40 @@ header {
 
         }
 
-        .tel {
-            small {
-                padding-left: 20px;
+        .search {
+            display: flex;
+            justify-content: flex-end;
+            .search-box {
+                width: fit-content;
+                font-weight: 200;
+                font-size: 14px;
+                border: 1px solid #fff;
+                padding: 5px;
+
+                input[type="search"] {
+                    border: none;
+
+                    &:focus {
+                        box-shadow: none;
+                        border-color: #ccc;
+                    }
+
+                    &::placeholder {
+                        color: $white;
+                    }
+
+                    &::-webkit-search-cancel-button {
+                        display: none;
+                        width: 0;
+                        height: 0;
+                    }
+                }
+
+                #search-addon {
+                    font-weight: 300;
+                }
             }
 
-            i {
-                color: $white;
-                font-size: 12px;
-                transform: rotate(100deg);
-            }
-
-            span {
-                color: $white;
-            }
         }
 
         .logo {

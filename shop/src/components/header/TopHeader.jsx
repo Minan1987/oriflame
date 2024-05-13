@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../../assets/img/logo-main-white.png'
 import { FaShoppingBasket } from "react-icons/fa";
-import { BsFillTelephoneFill } from "react-icons/bs";
+import SearchBox from '../search/SearchBox';
 
 const TopHeader = () => {
+   
     return (
         <div className="top-header">
             <div className="login-register col-sm-6 col-lg-4 text-end">
@@ -18,12 +19,8 @@ const TopHeader = () => {
                     <img src={logo} alt="Oriflame Logo" />
                 </a>
             </div>
-            <div className="tel col-sm-6 col-lg-4 text-start">
-                <small className="d-none d-md-inline-block">پشتیبانی مشتریان (از ۷:۰۰ تا ۲۱:۰۰)</small>
-                <a href="#">
-                    <span>۰۹۰۲۷۱۳۲۲۰۱ </span>
-                    <BsFillTelephoneFill />
-                </a>
+            <div className="search col-sm-6 col-lg-4">
+                <SearchBox />
             </div>
         </div>
     )
