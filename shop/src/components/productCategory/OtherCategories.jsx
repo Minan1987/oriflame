@@ -1,16 +1,23 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import imageCat17 from '../../assets/img/category-1.jpg'
 import imageCat18 from '../../assets/img/category-2.jpg'
 import imageCat19 from '../../assets/img/category-4.jpg'
 import imageCat20 from '../../assets/img/category-6.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function OtherCategories() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1500
+        });
+    }, [])
   return (
     <div class="multi-banner container-fluid">
             <div class="row">
                 <div class="col-12 col-lg-6 p-0">
                     <div class="row">
-                        <div class="col-sm-12 col-md-6">
+                        <div class="col-sm-12 col-md-6" data-aos="fade-up">
                             <div class="single-banner single-categorie">
                                 <div class="cat">
                                     <div class="cat-img">
@@ -24,7 +31,7 @@ function OtherCategories() {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6" data-aos="fade-up">
                             <div class="single-banner single-categorie">
                                 <div class="cat">
                                     <div class="cat-img">
@@ -38,7 +45,7 @@ function OtherCategories() {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-xl-12 mt-4 mb-md-4">
+                        <div class="col-12 col-xl-12 mt-4 mb-md-4" data-aos="fade-left">
                             <div class="single-banner single-categorie">
                                 <div class="cat">
                                     <div class="cat-img">
@@ -54,7 +61,7 @@ function OtherCategories() {
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6" data-aos="fade-right">
                     <div class="single-banner single-categorie">
                         <div class="cat">
                             <div class="cat-img">
