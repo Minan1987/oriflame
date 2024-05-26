@@ -9,6 +9,7 @@ import smallImage10 from '../../assets/img/small-item-10.jpg'
 import smallImage12 from '../../assets/img/small-item-12.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import {Link, Outlet} from 'react-router-dom'
 
 const DailyDeal = () => {
     useEffect(() => {
@@ -52,7 +53,7 @@ const DailyDeal = () => {
                                                         </div>
                                                     </div>
                                                     <div className="mask-content">
-                                                        <img src={smallImage8} alt="NOVAGE+" width="100%" />
+                                                       <Link to='/product'><img src={smallImage8} alt="NOVAGE+" width="100%" /></Link> 
                                                     </div>
                                                     <div className="detail-content">
                                                         <div className="title-card">
@@ -214,6 +215,7 @@ const DailyDeal = () => {
                                     </div>
                                 </div>
                             </div>
+                            <Outlet />
                             <button className="carousel-control-prev" type="button" data-bs-target="#product-item-slide-show"
                                 data-bs-slide="prev">
                                 <span className="carousel-control-prev-icon"></span>

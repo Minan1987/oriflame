@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 import logo from '../../assets/img/logo-main-white.png'
 import { FaShoppingBasket } from "react-icons/fa";
 import SearchBox from '../search/SearchBox';
+import { Link, Outlet } from 'react-router-dom'
 
 const TopHeader = () => {
    
     return (
         <div className="top-header">
             <div className="login-register col-sm-6 col-lg-4 text-end">
-                <a href="#">ورود</a>
-                <a href="#">عضویت</a>
+                <Link to="/login">ورود</Link>
+                <Link to="/login">عضویت</Link>
                 <a href="#">
                     <FaShoppingBasket />
                 </a>
@@ -22,6 +23,7 @@ const TopHeader = () => {
             <div className="search col-sm-6 col-lg-4">
                 <SearchBox />
             </div>
+            <Outlet />
         </div>
     )
 }

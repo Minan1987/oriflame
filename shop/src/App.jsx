@@ -1,6 +1,6 @@
 import React from 'react'
 import './assets/css/main.scss'
-import { TopHeader, Menu, Slider, Footer, CosmeticsPage, HairPage, SkinPage, WomenHealthPage, MenHealthPage, ChildrenHealthPage, LatestProducts, DailyDeal, ContactUs, AboutUs, ProductCategories, SearchPage } from './components'
+import { TopHeader, Menu, Slider, Footer, CosmeticsPage, HairPage, SkinPage, WomenHealthPage, MenHealthPage, ChildrenHealthPage, LatestProducts, DailyDeal, ContactUs, AboutUs, ProductCategories, SearchPage, Login, ProductPage } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const HomePage = () => {
@@ -31,6 +31,8 @@ const App = () => {
         <Route path='/contact-us' element={<ContactUs />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/search-page/:query' element={<SearchPage />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/product' element={<ProductPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
