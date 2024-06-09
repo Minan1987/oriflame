@@ -9,6 +9,8 @@ import pro08 from '../../assets/img/small-item-8.jpg'
 import pro09 from '../../assets/img/small-item-37.jpg'
 import pro10 from '../../assets/img/small-item-38.jpg'
 import pro11 from '../../assets/img/small-item-11.jpg'
+import pro12 from '../../assets/img/small-item-4.webp'
+import pro13 from '../../assets/img/small-item-6.webp'
 
 const products = [
    {
@@ -22,11 +24,11 @@ const products = [
    },
    {
       id: "2",
-      title: "رژ لب مات کالر آنلیمیتد دوان",
+      title: "رژ لب نمادین SPF 15",
       image: pro02,
-      price: 500000,
+      price: 16000000,
       category: "آرایش لب",
-      brand: "Colour Unlimited",
+      brand: "The ONE",
       qty: 1
    },
    {
@@ -58,11 +60,11 @@ const products = [
    },
    {
       id: "6",
-      title: "رژ لب نمادین SPF 15",
+      title: "رژ لب مات کالر آنلیمیتد دوان",
       image: pro06,
-      price: 16000000,
+      price: 500000,
       category: "آرایش لب",
-      brand: "The ONE",
+      brand: "Colour Unlimited",
       qty: 1
    },
    {
@@ -109,6 +111,28 @@ const products = [
       category: "ناخن",
       brand: "Oriflame",
       qty: 1
+   },
+   {
+      id: "12",
+      title: "ادوتویلت زنانه دِوان",
+      image: pro12,
+      price: 3500000,
+      category: "عطر و ادکلن",
+      brand: "The One EdT",
+      qty: 1
+   },
+   {
+      id: "13",
+      title: "عطر زنانه جوردانی گلد",
+      image: pro13,
+      price: 4500000,
+      category: "عطر و ادکلن",
+      brand: "GIORDANI GOLD",
+      qty: 1
    }
 ]
 export default products
+
+export const getProduct = (id) => {
+   return products.find(product => product.id === id)
+}

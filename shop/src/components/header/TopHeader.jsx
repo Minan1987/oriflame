@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import logo from '../../assets/img/logo-main-white.png'
 import { FaShoppingBasket } from "react-icons/fa";
 import SearchBox from '../search/SearchBox';
 import { Link, Outlet } from 'react-router-dom'
+import { useGlobalContext } from '../Context';
 
 const TopHeader = () => {
-   
+   const data = useGlobalContext()
+   console.log(data)
     return (
         <div className="top-header">
             <div className="login-register col-sm-6 col-lg-4 text-end">
@@ -14,6 +16,7 @@ const TopHeader = () => {
                 <a href="#">
                     <FaShoppingBasket />
                 </a>
+                <a href="#">hi</a>
             </div>
             <div className="logo col-lg-4 text-center d-none d-lg-inline-block">
                 <a href="#" target="_blank">

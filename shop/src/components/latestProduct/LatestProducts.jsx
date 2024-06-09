@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+
+import ProductItem from '../ProductItem';
 import bigImage1 from '../../assets/img/big-image1.webp'
 import bigImage2 from '../../assets/img/big-image1.webp'
 import smallImage1 from '../../assets/img/small-item-1.webp'
@@ -18,6 +20,7 @@ import 'aos/dist/aos.css';
 
 
 const LatestProducts = () => {
+
     useEffect(() => {
         AOS.init({
             duration: 1000
@@ -37,118 +40,20 @@ const LatestProducts = () => {
                                 <div className="carousel-item active">
                                     <div className="row">
                                         <div className="col-sm-6">
-                                            <div className="card">
-                                                <a className="card-body">
-                                                    <div className="mask-content">
-                                                        <img src={smallImage1} alt="اسفنج آرایشی" width="100%" />
-                                                    </div>
-                                                    <div className="detail-content">
-                                                        <div className="title-card">
-                                                            <h4 className="card-title">Oriflame</h4>
-                                                            <ul>
-                                                                <li><i><FaRegStar /></i></li>
-                                                                <li><i><FaRegStarHalfStroke /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-
-                                                            </ul>
-                                                        </div>
-
-                                                        <p className="card-text">اسفنج آرایشی گل</p>
-                                                        <div className="pro-details">
-                                                            <div className="price">۴۲۰,۰۰۰ تومان</div>
-                                                            <div className="add-to-card"><i><FaPlus /></i></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                            <ProductItem productId="1" />
                                         </div>
                                         <div className="col-sm-6 d-none d-sm-block" >
-                                            <div className="card">
-                                                <a className="card-body">
-                                                    <div className="mask-content">
-                                                        <img src={smallImage2} alt="تینت لب" width="100%" />
-                                                    </div>
-                                                    <div className="detail-content">
-                                                        <div className="title-card">
-                                                            <h4 className="card-title">Colour Unlimited</h4>
-                                                            <ul>
-                                                                <li><i><FaRegStar /></i></li>
-                                                                <li><i><FaRegStar /></i></li>
-                                                                <li><i><FaRegStarHalfStroke /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                            </ul>
-                                                        </div>
-                                                        <p className="card-text">رژ لب مات کالر آنلیمیتد دوان</p>
-                                                        <div className="pro-details">
-                                                            <div className="price">۷۵۰,۰۰۰ تومان</div>
-                                                            <div className="add-to-card"><i><FaPlus /></i></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                            <ProductItem productId="6" />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="carousel-item">
                                     <div className="row">
                                         <div className="col-sm-6">
-                                            <div className="card">
-                                                <a className="card-body">
-                                                    <div className="mask-content">
-                                                        <img src={smallImage5} alt="ONCOLOUR mascara" width="100%" />
-                                                    </div>
-                                                    <div className="detail-content">
-                                                        <div className="title-card">
-                                                            <h4 className="card-title">ONCOLOUR
-                                                            </h4>
-                                                            <ul>
-                                                                <li><i><FaRegStar /></i></li>
-                                                                <li><i><FaRegStar /></i></li>
-                                                                <li><i><FaRegStarHalfStroke /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                            </ul>
-                                                        </div>
-                                                        <p className="card-text">ریمل حجم دهنده وان کالر</p>
-                                                        <div className="pro-details">
-                                                            <div className="price">۵۰۰,۰۰۰ تومان</div>
-                                                            <div className="add-to-card"><i><FaPlus /></i></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                            <ProductItem productId="5" />
                                         </div>
                                         <div className="col-sm-6 d-none d-sm-block">
-                                            <div className="card">
-                                                <a className="card-body">
-                                                    <div className="mask-content">
-                                                        <img src={smallImage6} alt="GIORDANI GOLD" width="100%" />
-                                                    </div>
-                                                    <div className="detail-content">
-                                                        <div className="title-card">
-                                                            <h4 className="card-title">GIORDANI GOLD</h4>
-                                                            <ul>
-                                                                <li><i><FaRegStarHalfStroke /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-
-                                                            </ul>
-                                                        </div>
-
-                                                        <p className="card-text">عطر زنانه جوردانی گلد</p>
-                                                        <div className="pro-details">
-                                                            <div className="price">۱,۴۰۰,۰۰۰ تومان</div>
-                                                            <div className="add-to-card"><i><FaPlus /></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                            <ProductItem productId="13" />
                                         </div>
                                     </div>
                                 </div>
@@ -185,118 +90,20 @@ const LatestProducts = () => {
                                 <div className="carousel-item active">
                                     <div className="row">
                                         <div className="col-sm-6">
-                                            <div className="card">
-                                                <a className="card-body">
-                                                    <div className="mask-content">
-                                                        <img src={smallImage7} alt="Giordani Gold" width="100%" />
-                                                    </div>
-                                                    <div className="detail-content">
-                                                        <div className="title-card">
-                                                            <h4 className="card-title">Giordani Gold Pressed Powder</h4>
-                                                            <ul>
-                                                                <li><i><FaRegStarHalfStroke /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-
-                                                            </ul>
-                                                        </div>
-                                                        <p className="card-text">پنکیک جوردانی گلد</p>
-                                                        <div className="pro-details">
-                                                            <div className="price">۹۹۰,۰۰۰ تومان</div>
-                                                            <div className="add-to-card"><i><FaPlus /></i></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                            <ProductItem productId="7" />
                                         </div>
                                         <div className="col-sm-6 d-none d-sm-block">
-                                            <div className="card">
-                                                <a className="card-body">
-                                                    <div className="mask-content">
-                                                        <img src={smallImage11} alt="سوهان ناخن" width="100%" />
-                                                    </div>
-                                                    <div className="detail-content">
-                                                        <div className="title-card">
-                                                            <h4 className="card-title">ORIFLAME</h4>
-                                                            <ul>
-                                                                <li><i><FaRegStarHalfStroke /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-
-                                                            </ul>
-                                                        </div>
-                                                        <p className="card-text">ست سوهان ناخن ۴کاره اوریفبم</p>
-                                                        <div className="pro-details">
-                                                            <div className="price">۳۸۰,۰۰۰ تومان</div>
-                                                            <div className="add-to-card"><i><FaPlus /></i></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                            <ProductItem productId="11" />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="carousel-item">
                                     <div className="row">
                                         <div className="col-sm-6">
-                                            <div className="card">
-                                                <a className="card-body">
-                                                    <div className="mask-content">
-                                                        <img src={smallImage3} alt="رژگونه مرواریدی جوردانی گلد"
-                                                            width="100%" />
-                                                    </div>
-                                                    <div className="detail-content">
-                                                        <div className="title-card">
-                                                            <h4 className="card-title">Giordani Gold Rose Petal Blushing Pearls
-                                                            </h4>
-                                                            <ul>
-                                                                <li><i><FaRegStarHalfStroke /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-
-                                                            </ul>
-                                                        </div>
-                                                        <p className="card-text">رژگونه مرواریدی جوردانی گلد</p>
-                                                        <div className="pro-details">
-                                                            <div className="price">۳۰۰,۰۰۰ تومان</div>
-                                                            <div className="add-to-card"><i><FaPlus /></i></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                        <ProductItem productId="3" />
                                         </div>
                                         <div className="col-sm-6 d-none d-sm-block">
-                                            <div className="card">
-                                                <a className="card-body">
-                                                    <div className="mask-content">
-                                                        <img src={smallImage4} alt="The One EdT" width="100%" />
-                                                    </div>
-                                                    <div className="detail-content">
-                                                        <div className="title-card">
-                                                            <h4 className="card-title">The One EdT</h4>
-                                                            <ul>
-                                                                <li><i><FaRegStarHalfStroke /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-                                                                <li><i><FaStar /></i></li>
-
-                                                            </ul>
-                                                        </div>
-                                                        <p className="card-text">ادوتویلت زنانه دِوان</p>
-                                                        <div className="pro-details">
-                                                            <div className="price">۲,۶۰۰,۰۰۰ تومان</div>
-                                                            <div className="add-to-card"><i><FaPlus /></i></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                        <ProductItem productId="12" />
                                         </div>
                                     </div>
                                 </div>
@@ -312,6 +119,7 @@ const LatestProducts = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     );
