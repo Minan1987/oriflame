@@ -3,10 +3,10 @@ import React from 'react'
 function Filter(props) {
     return (
         <div className='filter d-flex justify-content-between align-items-center p-2'>
-            <div className="result">تعداد محصولات: {props.count} محصول</div>
+            <div className="result">تعداد محصولات:   {props.count} محصول</div>
             <div className="sort text-center">
-                <div className="sort-title">مرتب سازی بر اساس</div>
                 <div className="form-checkbox d-flex justify-content-between align-items-center">
+                <div className="sort-title ms-4">مرتب سازی بر اساس:</div>
                     <div className="form-group ms-2 d-flex align-items-center">
                         <input type="radio" value="asc" name="sort-radio" onChange={props.sortProducts} />
                         <label className='me-1'>جدیدترین</label>
@@ -17,7 +17,7 @@ function Filter(props) {
                     </div>
                 </div>
             </div>
-            <div className="all-cosmetics d-flex">
+            {/* <div className="all-cosmetics d-flex">
                 <div>دسته بندی آرایشی</div>
                 <select className="form-select" value={props.filterCategory} onChange={props.filterProduct} >
                     <option value="">همه</option>
@@ -26,7 +26,7 @@ function Filter(props) {
                     <option value="آرایش چشم">آرایش چشم</option>
                     <option value="ناخن">ناخن</option>
                 </select>
-            </div>
+            </div> */}
         </div>
     )
 }

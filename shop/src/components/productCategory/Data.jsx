@@ -14,6 +14,10 @@ import imageCat13 from '../../assets/img/small-item-25.jpg'
 import imageCat14 from '../../assets/img/small-item-26.jpg'
 import imageCat15 from '../../assets/img/small-item-27.jpg'
 import imageCat16 from '../../assets/img/small-item-28.jpg'
+import imageCat17 from '../../assets/img/category-1.jpg'
+import imageCat18 from '../../assets/img/category-2.jpg'
+import imageCat19 from '../../assets/img/category-6.jpg'
+import imageCat20 from '../../assets/img/category-3.jpg'
 
 const menu = [
     {
@@ -112,5 +116,33 @@ const menu = [
         category: "عطر و ادکلن",
         img: imageCat16
     },
+    {
+        id: 17,
+        title: "آرایش پوست",
+        category: "آرایشی",
+        img: imageCat17
+    },
+    {
+        id: 18,
+        title: "لاک ناخن",
+        category: "آرایشی",
+        img: imageCat18
+    },
+    {
+        id: 19,
+        title: "آرایش چشم",
+        category: "آرایشی",
+        img: imageCat19
+    },
+    {
+        id: 20,
+        title: "آرایش لب",
+        category: "آرایشی",
+        img: imageCat20
+    },
 ]
 export default menu
+
+export const itemCategory = (category) =>{
+ return menu.filter((item) => item.category === category)
+}

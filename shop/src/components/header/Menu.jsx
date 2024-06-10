@@ -11,9 +11,9 @@ const Menu = () => {
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <a target="_self" href="/" >
+                <Link to="/">
                     <img className="logo-md d-lg-none " src={logo} alt="اوریفلبم" width="150px" />
-                </a>
+                </Link>
                 <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li className="nav-item active">

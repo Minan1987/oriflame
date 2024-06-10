@@ -4,7 +4,7 @@ import products from './Data';
 import ProductItem from '../productPage/ProductItem';
 
 
-function Products() {
+function Products({items, addProduct}) {
     return (
         <div className='products'>
             <Fade bottom cascade>
@@ -13,7 +13,11 @@ function Products() {
                         products.map((product) =>
                         (
                             <li key={product.id} className='col-md-6 col-lg-4 mb-3'>
-                                <ProductItem productId={product.id}/>
+                                <ProductItem
+                                    items={items}
+                                    addProduct={addProduct}
+                                    productId={product.id}
+                                />
                             </li>
                         )
                         )

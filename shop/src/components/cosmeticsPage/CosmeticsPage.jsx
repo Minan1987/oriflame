@@ -3,8 +3,10 @@ import Filter from './Filter';
 import Products from './Products';
 import Cart from './Cart';
 import data from './Data'
+import { itemCategory } from '../productCategory/Data';
 
 const CosmeticsPage = () => {
+  const cosmeticsItems = itemCategory("آرایشی")
   const [items, setItems] = useState(data)
   const [sort, setSort] = useState("asc")
   const [filterCategory, setFilterCategory] = useState("")
@@ -21,14 +23,14 @@ const CosmeticsPage = () => {
   }
 
   const filterProduct = (event) => {
-    if (event.target.value === "") {
-      setFilterCategory(event.target.value)
-      setItems(data)
+    const category = event.target.value;
+    setFilterCategory(category);
+    if (category === "") {
+      setItems(cosmeticsItems);
     } else {
-      setFilterCategory(event.target.value)
-      setItems(data.filter((product) => product.category.indexOf(event.target.value) >= 0))
+      setItems(cosmeticsItems.filter(product => product.category.indexOf(category) >= 0));
     }
-  }
+  };
 
   const addProduct = (product) => {
     const exist = cartItems.find((element) => element.id === product.id)
@@ -55,7 +57,21 @@ const CosmeticsPage = () => {
 
   return (
     <section className='cosmetics container'>
-      <div className="row content">
+      <div className="row content mt-5">
+        {
+          cosmeticsItems.map((item) => (
+            <div key={item.id} className="item col-md-6 col-lg-3">
+              <a href="#">
+                <div className="mask-content">
+                  <img src={item.img} alt={item.title} width="100%" />
+                </div>
+                <div className="detail-content">
+                  <p>{item.title}</p>
+                </div>
+              </a>
+            </div>
+          ))
+        }
         <div className="col-sm-8 main">
           <Filter
             count={items.length}
