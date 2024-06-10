@@ -17,16 +17,6 @@ function Filter(props) {
                     </div>
                 </div>
             </div>
-            {/* <div className="all-cosmetics d-flex">
-                <div>دسته بندی آرایشی</div>
-                <select className="form-select" value={props.filterCategory} onChange={props.filterProduct} >
-                    <option value="">همه</option>
-                    <option value="آرایش صورت">آرایش صورت</option>
-                    <option value="آرایش لب">آرایش لب</option>
-                    <option value="آرایش چشم">آرایش چشم</option>
-                    <option value="ناخن">ناخن</option>
-                </select>
-            </div> */}
         </div>
     )
 }
