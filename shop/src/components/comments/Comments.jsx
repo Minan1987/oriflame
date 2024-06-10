@@ -24,7 +24,7 @@ function Comments() {
         .catch(() =>{})
     }
     return (
-        <div className='border w-50 p-3 rounded m-5'>
+        <div className='border w-100 p-3 rounded my-3 '>
             <div>
                 <label>نام شما</label>
                 <input type="text"
@@ -40,12 +40,12 @@ function Comments() {
                 />
             </div>
             <div>
-                <input type="textarea"
+                <textarea rows="3"
                     className='form-control mb-3'
                     onChange={messageHandler}
                 />
             </div>
-            <div className='mt-3'>
+            <div className='mt-3 d-flex justify-content-end'>
                 <button onClick={clickHandler} className='btn btn-outline-orif'>ارسال</button>
             </div>
         </div>

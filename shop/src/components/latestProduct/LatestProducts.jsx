@@ -1,20 +1,7 @@
 import React, { useEffect } from 'react';
-
-import ProductItem from '../ProductItem';
+import ProductItem from '../productPage/ProductItem';
 import bigImage1 from '../../assets/img/big-image1.webp'
 import bigImage2 from '../../assets/img/big-image1.webp'
-import smallImage1 from '../../assets/img/small-item-1.webp'
-import smallImage2 from '../../assets/img/small-item-2.webp'
-import smallImage3 from '../../assets/img/small-item-3.webp'
-import smallImage4 from '../../assets/img/small-item-4.webp'
-import smallImage5 from '../../assets/img/small-item-5.webp'
-import smallImage6 from '../../assets/img/small-item-6.webp'
-import smallImage7 from '../../assets/img/small-item-7.jpg'
-import smallImage11 from '../../assets/img/small-item-11.jpg'
-import { FaPlus } from "react-icons/fa6";
-import { FaStar } from "react-icons/fa6";
-import { FaRegStarHalfStroke } from "react-icons/fa6";
-import { FaRegStar } from "react-icons/fa6";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

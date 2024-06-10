@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom';
-import { getProduct } from './cosmeticsPage/Data'
+import formatCarrency from '../Util'
+import { getProduct } from '../cosmeticsPage/Data'
 import { FaPlus } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa6";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
@@ -31,7 +32,7 @@ const ProductItem = ({productId}) => {
                     </div>
                     <p className="card-text">ر{product.title}</p>
                     <div className="pro-details">
-                        <div className="price">{`${product.price} تومان`}</div>
+                        <div className="price">{`${formatCarrency(product.price)} تومان`}</div>
                         <div className="add-to-card"><i><FaPlus /></i></div>
                     </div>
                 </div>

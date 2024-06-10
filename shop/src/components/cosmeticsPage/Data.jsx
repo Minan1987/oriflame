@@ -20,7 +20,8 @@ const products = [
       price: 35000,
       category: "آرایش صورت",
       brand: "Oriflame",
-      qty: 1
+      qty: 1,
+      desc: ""
    },
    {
       id: "2",
@@ -29,7 +30,8 @@ const products = [
       price: 16000000,
       category: "آرایش لب",
       brand: "The ONE",
-      qty: 1
+      qty: 1,
+      desc: ""
    },
    {
       id: "3",
@@ -38,7 +40,8 @@ const products = [
       price: 450000,
       category: "آرایش صورت",
       brand: "Giordani Gold Rose Petal Blushing Pearls",
-      qty: 1
+      qty: 1,
+      desc: ""
    },
    {
       id: "4",
@@ -47,7 +50,8 @@ const products = [
       price: 850000,
       category: "آرایش چشم",
       brand: "Giordani Gold",
-      qty: 1
+      qty: 1,
+      desc: ""
    },
    {
       id: "5",
@@ -56,7 +60,8 @@ const products = [
       price: 990000,
       category: "آرایش چشم",
       brand: "ONCOLOUR",
-      qty: 1
+      qty: 1,
+      desc: ""
    },
    {
       id: "6",
@@ -65,7 +70,8 @@ const products = [
       price: 500000,
       category: "آرایش لب",
       brand: "Colour Unlimited",
-      qty: 1
+      qty: 1,
+      desc: "با ترکیبات مراقبت از لب، روغن جوجوبا و روغن ابربری که سرشار از آنتی اکسیدان هستند، به تغذیه و محافظت از لب ها در برابر عوامل خارجی مانند رادیکال های آزاد آسیب رسانده کمک می کند. فرمول تقویت کننده رطوبت ضروری را برای کمک به کاهش علائم قابل مشاهده پیری لب، فورا و در طول زمان ارائه می دهد. انتظار لب‌های نرم، مرطوب و جوانی داشته باشید که هیچ فرمولی در خطوط ریز ایجاد نمی‌کند."
    },
    {
       id: "7",
@@ -74,7 +80,8 @@ const products = [
       price: 350000,
       category: "آرایش صورت",
       brand: "Giordani Gold Pressed Powder",
-      qty: 1
+      qty: 1,
+      desc: ""
    },
    {
       id: "8",
@@ -83,7 +90,8 @@ const products = [
       price: 890000,
       category: "آرایش صورت",
       brand: "Oriflame",
-      qty: 1
+      qty: 1,
+      desc: ""
    },
    {
       id: "9",
@@ -92,7 +100,8 @@ const products = [
       price: 1100000,
       category: "آرایش چشم",
       brand: "The ONE",
-      qty: 1
+      qty: 1,
+      desc: ""
    },
    {
       id: "10",
@@ -110,7 +119,8 @@ const products = [
       price: 350000,
       category: "ناخن",
       brand: "Oriflame",
-      qty: 1
+      qty: 1,
+      desc: ""
    },
    {
       id: "12",
@@ -119,7 +129,8 @@ const products = [
       price: 3500000,
       category: "عطر و ادکلن",
       brand: "The One EdT",
-      qty: 1
+      qty: 1,
+      desc: ""
    },
    {
       id: "13",
@@ -128,7 +139,8 @@ const products = [
       price: 4500000,
       category: "عطر و ادکلن",
       brand: "GIORDANI GOLD",
-      qty: 1
+      qty: 1,
+      desc: ""
    }
 ]
 export default products

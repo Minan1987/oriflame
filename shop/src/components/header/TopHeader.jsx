@@ -7,7 +7,6 @@ import { useGlobalContext } from '../Context';
 
 const TopHeader = () => {
    const data = useGlobalContext()
-   console.log(data)
     return (
         <div className="top-header">
             <div className="login-register col-sm-6 col-lg-4 text-end">

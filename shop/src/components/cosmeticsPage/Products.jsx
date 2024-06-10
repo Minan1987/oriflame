@@ -1,52 +1,24 @@
 import React from 'react'
-import formatCarrency from '../Util';
 import Fade from 'react-reveal/fade';
-import { FaPlus } from "react-icons/fa6";
-import { FaStar } from "react-icons/fa6";
-import { FaRegStarHalfStroke } from "react-icons/fa6";
-import { FaRegStar } from "react-icons/fa6";
+import products from './Data';
+import ProductItem from '../productPage/ProductItem';
 
 
-function Products(props) {
+function Products() {
     return (
         <div className='products'>
             <Fade bottom cascade>
-            <ul className='row align-items-center p-0'>
-                {
-                    props.items.map((item) =>
-                        <li key={item.id} className='col-md-6 col-lg-4 mb-3'>
-                            <div className="card p-2 bg-white shadow-sm rounded">
-                                <a className="card-body">
-                                    <div className="mask-content">
-                                        <img src={item.image} alt={item.title} width="100%" />
-                                    </div>
-                                    <div className="detail-content">
-                                        <div className="title-card">
-                                            <h4 className="card-title">{item.brand}</h4>
-                                            <ul>
-                                                <li><i><FaRegStar /></i></li>
-                                                <li><i><FaRegStarHalfStroke /></i></li>
-                                                <li><i><FaStar /></i></li>
-                                                <li><i><FaStar /></i></li>
-                                                <li><i><FaStar /></i></li>
-
-                                            </ul>
-                                        </div>
-
-                                        <h2 className="card-text">{item.title}</h2>
-                                        <div className="pro-details">
-                                            <div className="price">{formatCarrency(item.price)}</div>
-                                            <button className="add-to-card" onClick={() => props.addProduct(item)}>
-                                                <i><FaPlus /></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                    )
-                }
-            </ul>
+                <ul className='row align-items-center p-0'>
+                    {
+                        products.map((product) =>
+                        (
+                            <li key={product.id} className='col-md-6 col-lg-4 mb-3'>
+                                <ProductItem productId={product.id}/>
+                            </li>
+                        )
+                        )
+                    }
+                </ul>
             </Fade>
         </div>
     )
