@@ -33,6 +33,28 @@
     }
 }
 
+.category-item {
+    position: relative;
+    a {
+        .mask-content{
+            img {
+
+            }
+        }
+        .detail-content{
+            @include item-in-center;
+            p {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                margin: 0;
+                background-color: #cbadad;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
+
 .card {
     border: none;
     background-color: transparent;

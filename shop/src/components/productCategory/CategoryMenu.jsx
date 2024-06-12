@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link , Outlet} from 'react-router-dom';
 
 function CategoryMenu({ items }) {
     const sliderRef = useRef(null);
@@ -54,14 +55,14 @@ function CategoryMenu({ items }) {
                     const { id, title, img } = item
                     return (
                         <div key={id} className="item">
-                            <a href="#" className="">
+                            <Link to={`/products/${title}`}>
                                 <div className="mask-content">
                                     <img src={img} alt={title} width="100%" />
                                 </div>
                                 <div className="detail-content">
                                     <p>{title}</p>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     )
                 })
@@ -71,22 +72,23 @@ function CategoryMenu({ items }) {
     }
 
         return (
-            <div className="row category-item mb-4">
+            <div className="row mb-4">
                 {items.map((item) => {
                     const { id, title, img } = item;
                     return (
                         <div key={id} className="col item">
-                            <a className="">
+                            <Link to={`/products/${title}`}>
                                 <div className="mask-content">
                                     <img src={img} alt={title} width="100%" />
                                 </div>
                                 <div className="detail-content">
                                     <p>{title}</p>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     );
                 })}
+                <Outlet />
             </div>
         );
     }

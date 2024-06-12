@@ -1,25 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Fade from 'react-reveal/fade';
-import products from './Data';
+import {itemCategory} from './Data';
 import ProductItem from '../productPage/ProductItem';
-
-
-
+import Filter from './Filter';
 
 function Products() {
-    const { category } = useParams();
-    const [filteredProducts, setFilteredProducts] = useState([]);
-
-    useEffect(() => {
-        const decodedCategory = decodeURIComponent(category);
-        const categoryProducts = products.filter(product => product.category === decodedCategory);
-        setFilteredProducts(categoryProducts);
-    }, [category]);
+    const params = useParams();
+    const products = itemCategory(params.productCategory)
     return (
         <div className='products container'>
-            <div className="row">
-                <Fade bottom cascade>
+            <div className="row my-5">
                     {
                         products.map((product) => (
                             <div key={product.id} className="col-md-6 col-lg-3">
@@ -28,7 +18,7 @@ function Products() {
                         )
                         )
                     }
-                </Fade>
+                 
             </div>
         </div>
     )

@@ -118,7 +118,7 @@ const menu = [
     },
     {
         id: 17,
-        title: "آرایش پوست",
+        title: "آرایش صورت",
         category: "آرایشی",
         img: imageCat17
     },
@@ -143,6 +143,7 @@ const menu = [
 ]
 export default menu
 
-export const itemCategory = (category) =>{
- return menu.filter((item) => item.category === category)
+export const itemCategory = (category) => {
+    return menu.filter((item) => item.category === category)
 }
+

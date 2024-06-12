@@ -12,8 +12,8 @@ const CosmeticsPage = () => {
       <div className="row content mt-5">
         {
           cosmeticsItems.map((item) => (
-            <div key={item.id} className="item col-md-6 col-lg-3">
-              <Link to={`/products/${encodeURIComponent(item.title)}`}>
+            <div key={item.id} className="category-item col-md-6 col-lg-3">
+              <Link to={`/products/${item.title}`}>
                 <div className="mask-content">
                   <img src={item.img} alt={item.title} width="100%" />
                 </div>

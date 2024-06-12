@@ -117,7 +117,7 @@ const products = [
       title: "ست سوهان ناخن ۴کاره اوریفلیم",
       image: pro11,
       price: 350000,
-      category: "ناخن",
+      category: "لاک ناخن",
       brand: "Oriflame",
       qty: 1,
       desc: ""
@@ -147,4 +147,8 @@ export default products
 
 export const getProduct = (id) => {
    return products.find(product => product.id === id)
+}
+
+export const itemCategory = (category) => {
+   return products.filter((item) => item.category === category)
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Filter(props) {
+function Filter() {
     return (
         <div className='filter d-flex justify-content-between align-items-center p-2'>
             <div className="result">تعداد محصولات:   {props.count} محصول</div>
