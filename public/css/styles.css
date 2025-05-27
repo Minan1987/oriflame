@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "tanha";
+  src: url("../fonts/Tanha.eot");
+  src: url("../fonts/Tanha.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Tanha.woff2") format("woff2"),
+    url("../fonts/Tanha.woff") format("woff"),
+    url("../fonts/Tanha.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html * {
+  font-family: "tanha", tahoma !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.title {
+  background: url("/img/section-bg.png") no-repeat scroll 50% 100%;
+  background-size: 35%;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.item img {
+  transition: .3s;
+  position: relative;
+}
+
+.item::before {
+  background: #e84ea0;
+  color: #fff;
+  content: "\f067";
+  font-family: FontAwesome;
+  font-size: 33px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  z-index: 9;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #555;
+  opacity: 0;
+  transition: .5s;
+}
+
+.item:hover::before {
+  top: 50%;
+  opacity: 1;
+}
+
+.item:hover::after {
+  opacity: .85;
+}
+
+.item:hover .mask-layer {
+  overflow: visible;
+  right: 10px;
+}
+
+.item:hover img::before {
+  opacity: 1;
+  top: 50%;
+}
+
+.seprator {
+  border: 2px solid #e84ea0;
+  border-radius: 5px;
+  height: 0px;
+  opacity: 1;
+  width: 86px;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide .title {
+  font-size: 41px;
+  font-weight: 300;
+}
+
+.swiper-slide .subtitle {
+  font-size: 21px;
+}
+
+.swiper-slide .text {
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.3;
+}
