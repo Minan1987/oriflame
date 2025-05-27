@@ -1,12 +1,34 @@
-# React + Vite
+# Oriflame Cosmetics Store 🛍️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An online cosmetics store built with **React**, **Redux Toolkit Query**, and **Tailwind CSS**, designed to showcase beauty products categorized by type and subcategory, with shopping cart functionality and a fully responsive interface.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Visit the Website](https://oriflame.bluenet.ir/)
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🧴 **Product Categories & Subcategories**  
+  Browse a wide range of cosmetics categorized by type (e.g. skincare, makeup, perfume).
+
+- 🛒 **Shopping Cart with Quantity Control**  
+  Add products to cart, increase/decrease quantity using `+ / -` buttons, and manage cart contents.
+
+- 🔄 **API Integration with RTK Query**  
+  Efficient data fetching and caching using **Redux Toolkit Query** — no need for Axios or manual state handling.
+
+- ⚛️ **Global State Management**  
+  Cart and product state managed cleanly via **Redux Toolkit** slices.
+
+- 🎨 **Fully Responsive Design with Tailwind CSS**  
+  Modern and adaptive layout built with **Tailwind CSS** for mobile-first responsiveness.
+
+## 🛠️ Tech Stack
+
+- **React**
+- **Redux Toolkit & RTK Query**
+- **Tailwind CSS**
+- **React Router DOM**
+
+## 📂 Folder Structure
+
