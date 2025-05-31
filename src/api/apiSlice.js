@@ -64,7 +64,21 @@ export const apiSlice = createApi({
                 body: patch
             }),
             invalidatesTags: ["CART"]
-        })
+        }),
+        //User
+        register: builder.mutation({
+            query: (userData) => ({
+                url: "/users",
+                method: "POST",
+                body: userData
+            })
+        }),
+        login: builder.mutation({
+            query: ({ email, password }) => ({
+                url: `/users?email=${email}&password=${password}`,
+                method: "GET",
+            }),
+        }),
     })
 })
 
@@ -78,5 +92,7 @@ export const {
     useAddToCartMutation,
     useRemoveFromCartMutation,
     useUpdateCartItemMutation,
-    useGetProductsByBrandQuery
+    useGetProductsByBrandQuery,
+    useRegisterMutation,
+    useLoginMutation
 } = apiSlice

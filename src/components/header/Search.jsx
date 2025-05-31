@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { IoSearch } from "react-icons/io5";
+import { BsSearchHeart } from "react-icons/bs";
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const Search = () => {
@@ -34,25 +34,25 @@ const Search = () => {
     }, []) // فقط یک بار موقع mount اجرا میشه
 
     return (
-        <div className="ms-5 flex w-[30%] items-center justify-between relative">
+        <div className="ms-5 flex w-full items-center justify-between relative">
             <input
                 type="search"
-                className="relative pl-8 m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-1.5 text-base font-normal text-surface transition duration-300 ease-in-out focus:border-primary focus:text-gray-700 focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:bg-body-dark dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill"
+                className="relative text-white pr-8 m-0 block flex-auto rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-1 py-1.5 text-base font-normal text-surface transition duration-300 ease-in-out focus:border-primary focus:text-white focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:bg-body-dark placeholder:text-gray-200"
                 value={inputValue}
                 onChange={handleChange}
                 onKeyDown={handleKeyDown}
-                placeholder="Search"
+                placeholder="جستجو..."
                 aria-label="Search"
                 aria-describedby="button-addon2"
             />
 
             {/* Search icon */}
             <span
-                className="absolute left-1 text-gray-600 dark:text-white cursor-pointer"
+                className="absolute right-1 text-gray-600 dark:text-white cursor-pointer"
                 id="basic-addon2"
                 onClick={handleSearch}
             >
-                <IoSearch style={{ fontSize: "1.5rem" }} />
+                <BsSearchHeart style={{ fontSize: "1.5rem", color:"#fff" }} />
             </span>
         </div>
     )

@@ -648,5 +648,19 @@
       "quantity": 3,
       "id": 3
     }
+  ],
+  "users": [
+    {
+      "name": "مینا نظری",
+      "email": "mina.nazary66@gmail.com",
+      "password": "mina12345",
+      "id": 1
+    },
+    {
+      "name": "مهران گرجی",
+      "email": "mehrangorgipoor@yahoo.com",
+      "password": "mehran123",
+      "id": 2
+    }
   ]
 }
