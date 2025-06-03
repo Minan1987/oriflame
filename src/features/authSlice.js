@@ -1,9 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-//ذخیره سازی کاربر در localStorage
-const initialUser = localStorage.getItem('user')
-    ? JSON.parse(localStorage.getItem('user'))
-    : null
+//جلوگیری از خطای JSON.parse	(بررسی مقدار undefined)
+let initialUser = null
+try {
+    const stored = localStorage.getItem("user")
+    if (stored && stored !== "undefined") {
+        initialUser = JSON.parse(stored)
+    }
+} catch (error) {
+    console.error("خطا در خواندن localStorage:", error)
+}
 
 const authSlice = createSlice({
     name: 'auth',

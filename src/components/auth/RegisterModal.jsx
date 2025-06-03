@@ -1,9 +1,10 @@
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-import { useRegisterMutation } from '../../api/apiSlice'
+import { useLazyCheckUserByEmailQuery, useRegisterMutation } from '../../api/apiSlice'
 import { toast } from 'react-toastify'
 
 const RegisterForm = ({ onSuccess }) => {
+    const [checkUserByEmail] = useLazyCheckUserByEmailQuery()
     const [register, { isLoading }] = useRegisterMutation()
 
     const formik = useFormik({
@@ -15,22 +16,33 @@ const RegisterForm = ({ onSuccess }) => {
         }),
         onSubmit: async (values) => {
             try {
-                const res = await register(values).unwrap()
-                if (res.length > 0) {
-                    localStorage.setItem('user', JSON.stringify(res[0]))
-                    toast.success(`خوش آمدید ${res[0].name}`)
-                    onSuccess(res[0])
-                } else {
-                    alert('ایمیل یا رمز عبور نامعتبر است')
+
+                //چک کردن ایمیل تکراری
+                const result = await checkUserByEmail(values.email)
+                const existingUsers = result?.data
+
+                if (existingUsers && existingUsers.length > 0) {
+                    toast.error("شما قبلا با این ایمیل ثبت نام کرده‌اید.")
+                    return
                 }
+
+                if (existingUsers.length > 0) {
+                    toast.error("شما قبلا با این ایمیل ثبت نام کرده‌اید.")
+                    return
+                }
+
+                const res = await register(values).unwrap()
+                localStorage.setItem('user', JSON.stringify(res))
+                toast.success(`خوش آمدید ${res.name}`)
+                onSuccess(res)
             } catch (err) {
-                alert('خطا در ثبت‌نام')
+                toast.error('خطا در ثبت‌نام. لطفاً دوباره تلاش کنید.')
             }
         },
     })
 
     return (
-        <form onSubmit={formik.handleSubmit} className="space-y-4">
+        <form onSubmit={formik.handleSubmit} className="space-y-4" autoComplete='off'>
             <input
                 name="name"
                 placeholder="نام"
