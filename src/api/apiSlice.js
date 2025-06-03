@@ -66,15 +66,15 @@ export const apiSlice = createApi({
             invalidatesTags: ["CART"]
         }),
         //User
-        checkUserByEmail: builder.query({
-            query: (email) => `/users?email=${email}`,
-        }),
         register: builder.mutation({
             query: (userData) => ({
                 url: "/users",
                 method: "POST",
                 body: userData
             })
+        }),
+        checkUserByEmail: builder.query({
+            query: (email) => `/users?email=${email}`,
         }),
         login: builder.mutation({
             query: ({ email, password }) => ({

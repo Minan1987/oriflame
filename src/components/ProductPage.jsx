@@ -40,7 +40,7 @@ const ProductPage= () => {
                     </div>
                     <div className="space-y-6">
                         <Link to="/">
-                            <div className="w-full flex items-center justify-end text-primary ">بازگشت<IoMdArrowRoundBack style={{ fontSize: "2rem" }} /> </div>
+                            <div className="w-full flex items-center justify-end text-primary-500 ">بازگشت<IoMdArrowRoundBack style={{ fontSize: "2rem" }} /> </div>
                         </Link>
                         <h2 className="text-3xl font-bold text-gray-900">{product.title}</h2>
                         <p className="text-lg text-gray-600">{product.description}</p>

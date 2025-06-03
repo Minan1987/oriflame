@@ -75,7 +75,7 @@ const CartStep = ({ nextStep }) => {
                                 <li className="py-3 border-b sm:py-4" key={item.id}>
                                     <div className="flex items-center">
                                         <div className='flex items-center justify-center'>
-                                            <button onClick={() => handleRemoveItem(item)} className='p-5'>
+                                            <button onClick={() => handleRemoveItem(item)} className='p-5 pr-0'>
                                                 <RxCross2 style={{ color: "tomato", fontSize: "1.3rem" }} />
                                             </button>
                                         </div>
@@ -83,12 +83,12 @@ const CartStep = ({ nextStep }) => {
                                             <img src={item.product.image} alt={item.product.title} className="w-16 h-16" />
 
                                         </div>
-                                        <div className="flex-1 min-w-0 ms-4">
-                                            <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                        <div className="ms-4 w-full lg:w-auto">
+                                            <p className="text-sm font-medium text-gray-900 break-words line-clamp-3 dark:text-white ">
                                                 {item.product.title}
                                             </p>
                                         </div>
-                                        <div className="flex-1 min-w-0 ms-4">
+                                        <div className="ms-4 w-full lg:w-auto">
                                             <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
                                                 <CustomNumeralNumericFormat
                                                     value={item.discountPrice}
@@ -97,9 +97,9 @@ const CartStep = ({ nextStep }) => {
                                                 />
                                             </p>
                                         </div>
-                                        <div className="flex-1 min-w-0 ms-4">
-                                            <div className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                                <div className="flex items-center justify-center me-6">
+                                        <div className="ms-4 w-full lg:w-auto">
+                                            <div className="text-sm font-medium text-gray-900 dark:text-white">
+                                                <div className="w-full flex items-center justify-end me-4">
                                                     <button
                                                         onClick={() => handleDecreaseQty(item)}
                                                         className="bg-gray-200 p-3 rounded"
@@ -117,7 +117,7 @@ const CartStep = ({ nextStep }) => {
 
                                             </div>
                                         </div>
-                                        <div className="w-full inline-flex items-center justify-start text-base font-semibold text-gray-900 dark:text-white">
+                                        <div className="w-full inline-flex items-center justify-end text-base font-semibold text-gray-900 dark:text-white">
                                             <CustomNumeralNumericFormat
                                                 value={totalPrice}
                                                 thousandSeparator=","

@@ -640,13 +640,8 @@
   "cart": [
     {
       "productId": "11",
-      "quantity": 1,
+      "quantity": 2,
       "id": 1
-    },
-    {
-      "productId": "15",
-      "quantity": 3,
-      "id": 3
     }
   ],
   "users": [
@@ -667,18 +662,6 @@
       "email": "mohana@gmail.com",
       "password": "mohana123",
       "id": 3
-    },
-    {
-      "name": "مینا",
-      "email": "mina.nazary66@gmail.com",
-      "password": "ئهدشسشتصای",
-      "id": 4
-    },
-    {
-      "name": "mina",
-      "email": "mina.nazary66@gmail.com",
-      "password": "mina123445",
-      "id": 5
     }
   ]
 }

@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
                                 prefix={` قیمت: `}
                                 suffix={` تومان `}
                             /></div>
-                        <div className="add-to-card bg-primary rounded p-3 text-white"><i><FaPlus /></i>
+                        <div className="add-to-card bg-primary-500 rounded p-3 hover:bg-primary-700 transition-colors duration-300 text-white"><i><FaPlus /></i>
                         </div>
                     </div>
                 </div>

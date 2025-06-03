@@ -38,7 +38,7 @@ const AddToCartButtom = ({ productId, quantity }) => {
     return (
         <button
             onClick={handleAddToCart}
-            className="bg-primary text-white px-6 py-2 rounded-lg shadow-md hover:bg-primary-accent-300 focus:outline-none focus:ring-2 focus:ring-primary-500 active:bg-primary-600"
+            className="bg-primary-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-primary-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 active:bg-primary-600"
         >
             اضافه به سبد خرید
         </button>

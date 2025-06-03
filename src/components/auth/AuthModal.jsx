@@ -22,13 +22,13 @@ const AuthModal = ({ onClose }) => {
 
         <div className="flex mb-4 border-b">
           <button
-            className={`flex-1 py-2 text-center ${activeTab === 'login' ? 'border-b-2 border-primary-600 text-primary-600' : 'text-gray-500'}`}
+            className={`flex-1 py-2 text-center ${activeTab === 'login' ? 'border-b-2 border-primary-500 text-primary-500' : 'text-gray-500'}`}
             onClick={() => setActiveTab('login')}
           >
             ورود
           </button>
           <button
-            className={`flex-1 py-2 text-center ${activeTab === 'register' ? 'border-b-2 border-primary-600 text-primary-600' : 'text-gray-500'}`}
+            className={`flex-1 py-2 text-center ${activeTab === 'register' ? 'border-b-2 border-primary-500 text-primary-500' : 'text-gray-500'}`}
             onClick={() => setActiveTab('register')}
           >
             ثبت‌نام

@@ -45,14 +45,14 @@ const Navbar = () => {
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => setDropdownOpen(prev => !prev)}
-                  className="text-sm cursor-pointer hover:text-primary transition-colors"
+                  className="text-sm text-white cursor-pointer"
                 >
                   سلام، {user.name}
                 </button>
                 {dropdownOpen && (
                   <div className="absolute top-full mt-2 right-0 w-40 bg-white border border-gray-200 rounded shadow-md z-10">
                     <button
-                      className="block w-full text-right px-4 py-2 text-sm hover:text-primary-500"
+                      className="block w-full text-right px-4 py-2 text-sm hover:text-primary-500 transition-colors"
                       onClick={() => {
                         navigate("/")
                         console.log("مشاهده پروفایل");
@@ -62,7 +62,7 @@ const Navbar = () => {
                       مشاهده پروفایل
                     </button>
                     <button
-                      className="block w-full text-right px-4 py-2 text-sm hover:text-primary-500"
+                      className="block w-full text-right px-4 py-2 text-sm hover:text-primary-500 transition-colors"
                       onClick={() => {
                         navigate("/")
                         setDropdownOpen(false);
@@ -71,7 +71,7 @@ const Navbar = () => {
                       تنظیمات
                     </button>
                     <button
-                      className="block w-full text-right px-4 py-2 text-sm hover:text-primary-500"
+                      className="block w-full text-right px-4 py-2 text-sm hover:text-primary-500 transition-colors"
                       onClick={() => {
                         dispatch(logOut());
                         setDropdownOpen(false);
@@ -87,7 +87,7 @@ const Navbar = () => {
                 <button
                   type="button"
                   onClick={() => setShowAuth(true)}
-                  className="me-3 inline-block rounded px-2 pb-2 pt-2.5 text-xs font-medium uppercase text-primary hover:text-primary-600">
+                  className="me-3 inline-block rounded border-2 border-white px-2 pb-2 pt-2.5 text-xs font-medium uppercase text-white hover:bg-white hover:text-primary-500 transition-colors duration-500">
                   ورود | ثبت‌نام
                 </button>
                 {showAuth && <AuthModal onClose={() => setShowAuth(false)} />}
@@ -99,7 +99,7 @@ const Navbar = () => {
 
         {/* سبد خرید */}
         <div className="relative">
-          <Link to="/cart" className="text-neutral-600 dark:text-white hover:text-black dark:hover:text-neutral-300">
+          <Link to="/cart" className="text-white hover:text-primary-200 transition-colors dark:hover:text-neutral-300">
             <HiShoppingCart size={22} />
           </Link>
           {totalItemQuantity > 0 && (
@@ -111,7 +111,7 @@ const Navbar = () => {
 
         {/* نوتیفیکیشن */}
         <div className="relative">
-          <Link to="#" className="text-neutral-600 dark:text-white hover:text-black dark:hover:text-neutral-300">
+          <Link to="#" className="text-white hover:text-primary-200 transition-colors dark:hover:text-neutral-300">
             <HiBell size={22} />
           </Link>
           <span className="absolute -top-2 -right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-1 rounded-full">
